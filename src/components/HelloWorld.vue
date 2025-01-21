@@ -29,9 +29,24 @@
     <ul v-for="(pemain,Index) in footBall" :key="`${pemain},${Index}`">
       <li>{{ pemain.nama}} - {{ pemain.klub }} - {{ Index }}</li>
     </ul>
+    <button v-on:click="count1++">+</button>
+    <span>{{ count1 }}</span>
+    <button v-on:click="count1--">-</button>
+    <br>
+    <button @click="sayHello(`masGarling`)">sayHello</button>
+    <input type="text" v-on:keydown.enter="sayHello(`masGarling`)">
+    <div>
+      <a v-bind:href="URL">fajrul</a>
+    </div>
+   <div>
+   <img :src="gambarLokal" alt="" >
+   </div>
 </template>
   
 <script>
+import gambarLokal from "@/assets/download.jpeg";
+
+  
 export default {
   name: 'HelloWorld',
   
@@ -43,16 +58,20 @@ export default {
       halo: "jadi gini le",
       invis: false,
       count: 0,
+      count1:0,
       tekan1:"tekan1",
       lampu:false,
-      nilai:60,
+      nilai:100,
       buah:['nanas','mangga','jamur'],
+      
       footBall:
       [{nama:"CR7",posisi:"RW",klub:"Al Nasser"},
       {nama:"LM10",posisi:"RW",klub:"Inter Miami"},
       {nama:"NJ11",posisi:"LW",klub:"Al Hilal"},
       {nama:"SUAREZ9",posisi:"CF",klub:"Inter Miami"}
-      ]
+      ],
+      URL:"https://www.youtube.com/watch?v=rz6tWraWi00&t=345s",
+      gambarLokal
     }
   },
     
@@ -68,6 +87,9 @@ export default {
     },
     idup(){
       this.lampu = !this.lampu
+    },
+    sayHello(apasaja){
+      alert('halo'+apasaja)
     }
   },
   props: {
