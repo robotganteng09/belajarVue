@@ -12,6 +12,7 @@
    
     <h1 v-show="lampu">aku ganteng</h1>
     <h2 v-text="hai"></h2>
+    >
     <span v-if="nilai >70">
       bagus
     </span>
@@ -37,6 +38,9 @@
     <input type="text" v-on:keydown.enter="sayHello(`masGarling`)">
     <div>
       <a v-bind:href="URL">fajrul</a>
+    </div>
+    <div>
+      <img src="@/assets/download.jpeg" alt="">
     </div>
    <div>
    <img :src="gambarLokal" alt="" >
@@ -71,7 +75,7 @@ export default {
       {nama:"SUAREZ9",posisi:"CF",klub:"Inter Miami"}
       ],
       URL:"https://www.youtube.com/watch?v=rz6tWraWi00&t=345s",
-      gambarLokal
+      gambarLokal 
     }
   },
     
