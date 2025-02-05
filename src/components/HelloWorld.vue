@@ -1,4 +1,7 @@
 <template>
+  <body>
+    
+  </body>
     <h1>{{ msg }}</h1>
     <h1>{{ garling }}</h1>
     <h1>{{ halo }}</h1>
@@ -37,6 +40,7 @@
     <button @click="sayHello(`masGarling`)">sayHello</button>
     <input type="text" v-on:keydown.enter="sayHello(`masGarling`)">
     <div>
+    
       <a v-bind:href="URL">fajrul</a>
     </div>
     <div>

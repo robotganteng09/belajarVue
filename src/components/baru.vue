@@ -6,11 +6,13 @@ data() {
     }
 }
 }
+
+
 const Hello = "<h1>Hello  gamye</h1>"
 </script>
 
 <template>
     <h1>
-        {{ hello }}
+        {{ hello }}z
     </h1>
 </template>
